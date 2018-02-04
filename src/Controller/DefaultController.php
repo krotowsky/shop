@@ -14,9 +14,17 @@ class DefaultController extends Controller
     public function IndexAction(){
 
         return $this->render(
-            'home/index.html.twig', array(
-                'number'=>'1'
-            )
+            'home/std_layout_index.html.twig'
+        );
+    }
+
+    /**
+     * @Route ("/catalog")
+     */
+    public function CatalogAction(){
+
+        return $this->render(
+            'home/std_layout_catalog.html.twig'
         );
     }
 

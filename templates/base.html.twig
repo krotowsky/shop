@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
+{% include 'head.html.twig' %}
     <body>
-        {% block body %}
-        {{ number }}
+        {% block topbar %}{% endblock %}
+        {% block javascripts %}
+            <script src="js/jquery-1.11.0.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/jquery.cookie.js"></script>
+            <script src="js/waypoints.min.js"></script>
+            <script src="js/modernizr.js"></script>
+            <script src="js/bootstrap-hover-dropdown.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/front.js"></script>
         {% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
+{% include 'footer.html.twig' %}
 </html>
